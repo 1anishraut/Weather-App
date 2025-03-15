@@ -1,0 +1,13 @@
+@import "tailwindcss";
+.preloader{
+    background: rgb(99,99,126);
+background: radial-gradient(circle, rgba(99,99,126,1) 18%, rgba(16,25,70,1) 100%);
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Medium.ttf);
+}
+body{
+    font-family: Gilroy;
+    letter-spacing: 2px;
+}

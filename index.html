@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/clear.png">
+    <link href="./output.css" rel="stylesheet">
+    <title>Weather App</title>
+  </head>
+
+  <body class="bg-[#101039a6] flex justify-center">
+
+    <div class="preloader w-full h-screen flex flex-col items-center gap-10 py-4">
+
+      <div class="h-1/2 flex ">
+        <img src="./images/mist.png" alt="" class="self-center">
+      </div>
+
+      <div class="flex flex-col items-center gap-2">
+        <h1 class="text-[#DBECFC] font-bold text-7xl">Weather</h1>
+        <p class="text-[#F5B154] font-semibold text-3xl tracking-widest">ForeCasts</p>
+        <div class="flex text-[#DBECFC] items-center text-xl"><img src="./images/map-pin-2-line.png" alt="" class="pr-1">Allow | Search City</div>
+      </div>
+
+      <button class="startBtn bg-[#F5B154] rounded-full mt-3 p-4">
+        <img src="./images/arrow-right-line.png" alt="" class="h-[40px]">
+      </button>
+
+    </div>
+    
+
+
+    <div class="background main hidden flex-col w-full  gap-6  text-white p-7 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/clear.jpg');">
+      <!-- SEARCH SECTION  -->
+      <div class="search_area w-full max-w-[1024px] self-center ">
+        <div
+          class="search bg-[#1a1c499a] flex items-center justify-between rounded-full gap-15 py-4 px-6 lg:px-10"
+        >
+          <input
+            id="searchInput"
+            class="w-full focus:outline-none text-2xl lg:text-3xl"
+            type="text"
+            placeholder="Enter city name"
+            spellcheck="false"
+            value=""
+          />
+          <button id="searchBtn" class=""><img src="images/search.png" alt="" class="w-[40px] h-auto" /></button>
+        </div>
+      </div>
+
+      <!-- SECTION 2  -->
+      <div class="weather flex flex-col gap-6 w-full max-w-[1024px] self-center ">
+
+        <div class="rounded-4xl bg-[#1a1c499a] flex flex-col items-center justify-between pb-4 gap-2 md:flex-row md:px-20">
+          <img src="./images/rain.png" alt="" class="weather_icon h-[180px]" />
+          <p class="weatherType text-2xl font-semibold"></p>
+          <div class="flex flex-col justify-center items-center">
+              <h1 class="temp text-7xl font-bold"></h1>
+              <h2 class="city text-3xl font-semibold"></h2>
+              <h3 class="wrong_city text-2xl">Invalid City Name</h3>
+          </div>
+          
+        </div>
+
+        <div class="details flex flex-col gap-6 pb-6">
+             <!-- R1 -->
+            <div class=" flex  justify-between items-center gap-6">
+
+                <div class="details_1 bg-[#1a1c499a] rounded-4xl flex flex-col items-center justify-between p-6 w-1/2 gap-4">
+                    <img src="./images/humidity.png" alt="" class="h-[45px] self-end"/>
+                    <div class="self-start">
+                        <p class="humidity text-xl font-semibold"></p>
+                        <p class="text-xl">Humidity</p>
+                    </div>
+                </div>
+
+                <div class="details_1 bg-[#1a1c499a] rounded-4xl flex flex-col items-center justify-between p-6 w-1/2 gap-4">
+                <img src="./images/wind.png" alt="" class="h-[45px] self-end" />
+                <div class="self-start">
+                    <p class="wind text-xl font-semibold"></p>
+                    <p class="text-xl">Wind Speed</p>
+                </div>
+                </div>
+
+            </div>
+
+            <!-- R2 -->
+            <div class=" flex  justify-between items-center gap-6">
+                <div class="details_1 bg-[#1a1c499a] rounded-4xl flex flex-col items-center justify-between p-6 w-1/2 gap-4">
+                    <img src="./images/thermometer.png" alt="" class="h-[45px] self-end invert" />
+                    <div class="self-start">
+                        <p class="feelsLike text-xl font-semibold"></p>
+                        <p class="text-xl">Feels Like</p>
+                    </div>
+                </div>
+                <div class="details_1 bg-[#1a1c499a] rounded-4xl flex flex-col items-center justify-between p-6 w-1/2 gap-4">
+                    <img src="./images/visibility.png" alt="" class="h-[45px] self-end invert" />
+                    <div class="self-start">
+                        <p class="visibility text-xl font-semibold"></p>
+                        <p class="text-xl">Visibility</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- R3 -->
+             <div class=" flex  justify-between items-center gap-6">
+                <div class="details_1 bg-[#1a1c499a] rounded-4xl flex flex-col items-center justify-between p-6 w-1/2 gap-4">
+                    <img src="./images/sunrise.png" alt=""class="h-[45px] self-end invert" />
+                    <div class="self-start">
+                        <p class="sunrise text-xl font-semibold"></p>
+                        <p class="text-xl">Sunrise</p>
+                    </div>
+                </div>
+                <div class="details_1 bg-[#1a1c499a] rounded-4xl flex flex-col items-center justify-between p-6 w-1/2 gap-4">
+                    <img src="./images/sunset.png" alt="" class="h-[45px] self-end invert" />
+                    <div class="self-start">
+                        <p class="sunset text-xl font-semibold"></p>
+                        <p class="text-xl">Sunset</p>
+                    </div>
+                </div>
+             </div>
+
+          
+        </div>
+      </div>
+        <div class="w-full flex items-center justify-center text-[#ffffff] bg-[#7474748f]">
+            <p>Designed & Developed || Anish Raut</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
